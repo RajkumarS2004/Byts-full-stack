@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="../../style/style.css" />
+    <style>
+      .stopwatch-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        border: 2px solid #9edbd3; /* mint green border */
+        padding: 20px;
+        height: 300px;
+        width: 500px;
+        box-shadow: 0 0 20px rgba(158, 219, 211, 0.2); /* pastel glow */
+        background-color: #1f1f1f; /* container dark bg */
+        color: #f0f0f0;
+      }
+
+      .time {
+        font-size: 4rem;
+        margin: 20px 0;
+      }
+
+      .controls button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #295858;
+        color: white;
+        cursor: pointer;
+      }
+
+      .controls button:hover {
+        background-color: #9edbd3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="../../img/Intertwined _J_ and _R_ Logo.png" alt="My Logo" />
+      <nav>
+        <ul>
+          <li><a href="../../index.html">HOME</a></li>
+          <li><a href="../add/add.html">ADD NUMBERS</a></li>
+          <li><a href="#">STOPWATCH</a></li>
+          <li>
+            <a href="../degreetocelsius/degreetocelsius.html"
+              >FAHRENHEIT TO CELSIUS</a
+            >
+          </li>
+          <li><a href="../calculator/calculator.html">CALCULATOR</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="stopwatch-container">
+        <h1>STOPWATCH</h1>
+        <div class="time" id="display">00:00:00</div>
+    
+        <div class="controls">
+          <button onclick="start()">Start</button>
+          <button onclick="stop()">Stop</button>
+          <button onclick="reset()">Reset</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

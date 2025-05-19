@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Degree to Celsius Converter</title>
+  <link rel="stylesheet" href="../../style/style.css" />
+<link rel="stylesheet" href="./degreetocelsius.css">
+</head>
+<body>
+  <header>
+    <img src="../../img/Intertwined _J_ and _R_ Logo.png" alt="My Logo" />
+    <ul>
+      <li><a href="../../index.html">HOME</a></li>
+      <li><a href="../add/add.html">ADD NUMBERS</a></li>
+      <li><a href="../stopwatch/stopwatch.html">STOPWATCH</a></li>
+      <li><a href="#">FAHRENHEIT TO CELSIUS</a></li>
+      <li><a href="../calculator/calculator.html">CALCULATOR</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Convert Fahrenheit to Celsius</h1>
+      <form onsubmit="convertTemperature(event)">
+        <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit" required>
+        <br>
+        <button type="submit">Convert</button>
+        <h2 id="result"></h2>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    function convertTemperature(event) {
+      event.preventDefault();
+      const fahrenheit = parseFloat(document.getElementById('fahrenheit').value);
+      const celsius = ((fahrenheit - 32) * 5 / 9).toFixed(2);
+      document.getElementById('result').innerText = `Result: ${celsius}°C`;
+    }
+  </script>
+</body>
+</html>
